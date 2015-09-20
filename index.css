@@ -1,0 +1,61 @@
+h1{
+    font-family: "Segoe UI Light" sans-serif;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    font-size: 48pt;
+    height:100px;
+    margin: 0 0 0 0;
+    box-shadow:0 0px 5px;
+    background-color:#fff;
+    z-index: 1;
+    position:relative;
+    min-width: 720px;
+}
+body{
+    background-color:#aaa;
+    padding:0;
+    margin:0;
+    min-width: 720px;
+}
+.teamContainer{
+    background-color:#fff;
+    margin-top:0px;
+    min-width: 512px;
+    max-width:720px;
+    box-shadow: 0 2px 4px;
+    min-height:720px;
+    margin-left:auto;
+    margin-right:auto;
+    z-index: 0;
+    position:relative;
+    padding:10px;
+}
+.team{
+    width:100%;
+    height:50px;
+    margin:0;
+    padding: 0;
+    border-bottom: 1px solid;
+    border-color: #ccc;
+}
+.member{
+    width:50%;
+    float:left;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Segoe UI Light" sans-serif;
+    height:100%;
+    margin:0;
+    vertical-align: middle;
+}
+.dead{
+    text-decoration: line-through;
+}
+.creds{
+    text-align: center;
+    position:absolute;
+    bottom: 0px;
+    width:100%;
+    font-family: "Segoe UI" sans-serif;
+}
