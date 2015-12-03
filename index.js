@@ -36,6 +36,8 @@ query.find({
             }
             $("#teams").append(teamdiv);
         }
+        document.getElementById("teamsleft").innerHTML = "Teams alive: " + alive.length;
+        
         // add dead teams, at bottom, with strikethrough
         for (var i=0; i<dead.length;i++){
             var teamdiv = document.createElement("div");
