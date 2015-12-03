@@ -49,12 +49,25 @@ body{
     margin:0;
     vertical-align: middle;
 }
+.hlTarg{
+    width: 40px;
+    height: 40px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:0;
+    margin-bottom:0;
+    display:block;
+    padding:0px;
+    position: relative;
+    top:-45px;
+    cursor:help;
+}
 .dead{
     text-decoration: line-through;
 }
 .creds{
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     position:fixed;
     bottom: 0px;
     width:100%;
