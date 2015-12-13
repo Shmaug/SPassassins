@@ -17,9 +17,9 @@ query.find({
         }
         // add alive teams
         for (var i=0; i<alive.length;i++){
-            var teamdiv = document.createElement("div");
-            var mem1 = document.createElement("p");
-            var mem2 = document.createElement("p");
+            var teamdiv = document.createElement("ul");
+            var mem1 = document.createElement("li");
+            var mem2 = document.createElement("li");
             teamdiv.className="team";
             mem1.className="member";
             mem2.className="member";
@@ -27,13 +27,31 @@ query.find({
             mem2.innerHTML=alive[i].get("Member2");
             teamdiv.appendChild(mem1);
             teamdiv.appendChild(mem2);
+            
+            var date = alive[i].get("LastKill");
+            var lk = document.createElement("li");
+            lk.className="lastkill";
+            lk.innerHTML = "No kills";
+            if (date.getFullYear() >= 2015){
+                lk.innerHTML = "Last kill: " + date.getMonth() + "/" + date.getUTCDate() + "/" + date.getFullYear();
+            }
+            teamdiv.appendChild(lk);
+            
             if (alive[i].get("HitList")){
+                var imgtd = document.createElement("li");
                 var img = document.createElement("img");
                 img.className="hlTarg"
                 img.src="cross.png"
                 img.title="This team is on the hit list"
-                teamdiv.appendChild(img);
+                
+                if (alive[i].get("PurgeList")){
+                    img.src="cross2.png"
+                    img.title="This team is on the purge list"
+                }
+                imgtd.appendChild(img);
+                teamdiv.appendChild(imgtd);
             }
+            
             $("#teams").append(teamdiv);
         }
         document.getElementById("teamsleft").innerHTML = "Teams alive: " + alive.length;
