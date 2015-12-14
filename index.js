@@ -33,7 +33,7 @@ query.find({
             lk.className="lastkill";
             lk.innerHTML = "No kills";
             if (date.getFullYear() >= 2015){
-                lk.innerHTML = "Last kill: " + date.getMonth() + "/" + date.getUTCDate() + "/" + date.getFullYear();
+                lk.innerHTML = "Last kill: " + (date.getMonth() + 1) + "/" + date.getUTCDate() + "/" + date.getFullYear();
             }
             teamdiv.appendChild(lk);
             
