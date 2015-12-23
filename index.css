@@ -17,6 +17,7 @@ body{
     padding:0;
     margin:0;
     min-width: 720px;
+    cursor: url("gnome.png"), auto;
 }
 .teamContainer{
     background-color:#fff;
